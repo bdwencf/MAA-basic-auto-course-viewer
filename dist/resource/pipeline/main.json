@@ -1,0 +1,138 @@
+{
+  "弹窗守卫": {
+    "next": [
+      "答题弹窗_先选择",
+      "课程提醒_关闭",
+      "存储提示_白色_取消",
+      "存储提示_深色_知道了",
+      "守卫空转"
+    ],
+    "rate_limit": 200
+  },
+  "答题弹窗_先选择": {
+    "recognition": "TemplateMatch",
+    "template": [
+      "popup_quiz_judgement_title.png",
+      "popup_quiz_single_title.png",
+      "popup_quiz_multi_title.png"
+    ],
+    "threshold": [
+      0.82,
+      0.82,
+      0.82
+    ],
+    "roi": [
+      20,
+      150,
+      220,
+      160
+    ],
+    "action": "Click",
+    "target": [
+      160,
+      315
+    ],
+    "post_delay": 700,
+    "next": [
+      "答题弹窗_点击跳过"
+    ],
+    "on_error": [
+      "弹窗守卫"
+    ]
+  },
+  "答题弹窗_点击跳过": {
+    "recognition": "DirectHit",
+    "action": "Click",
+    "target": [
+      640,
+      177
+    ],
+    "post_delay": 600,
+    "next": [
+      "弹窗守卫"
+    ],
+    "on_error": [
+      "弹窗守卫"
+    ]
+  },
+  "课程提醒_关闭": {
+    "recognition": "TemplateMatch",
+    "template": "popup_course_reminder_title.png",
+    "threshold": 0.72,
+    "roi": [
+      240,
+      360,
+      260,
+      180
+    ],
+    "action": "Click",
+    "target": [
+      655,
+      395
+    ],
+    "post_delay": 500,
+    "next": [
+      "弹窗守卫"
+    ],
+    "on_error": [
+      "弹窗守卫"
+    ]
+  },
+  "存储提示_白色_取消": {
+    "recognition": "TemplateMatch",
+    "template": "popup_storage_white_title.png",
+    "threshold": 0.72,
+    "roi": [
+      240,
+      520,
+      260,
+      160
+    ],
+    "action": "Click",
+    "target": [
+      210,
+      705
+    ],
+    "post_delay": 500,
+    "next": [
+      "弹窗守卫"
+    ],
+    "on_error": [
+      "弹窗守卫"
+    ]
+  },
+  "存储提示_深色_知道了": {
+    "recognition": "TemplateMatch",
+    "template": "popup_storage_dark_title.png",
+    "threshold": 0.72,
+    "roi": [
+      240,
+      530,
+      260,
+      160
+    ],
+    "action": "Click",
+    "target": [
+      525,
+      705
+    ],
+    "post_delay": 500,
+    "next": [
+      "弹窗守卫"
+    ],
+    "on_error": [
+      "弹窗守卫"
+    ]
+  },
+  "守卫空转": {
+    "recognition": "DirectHit",
+    "action": "DoNothing",
+    "post_delay": 400,
+    "next": [
+      "弹窗守卫"
+    ],
+    "on_error": [
+      "弹窗守卫"
+    ]
+  }
+}

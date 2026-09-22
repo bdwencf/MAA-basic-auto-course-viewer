@@ -1,0 +1,6 @@
+{
+  "adb_path": "D:/MuMuPlayer-12.0/shell/adb.exe",
+  "address": "127.0.0.1:16416",
+  "resource": "resource",
+  "entry": "弹窗守卫"
+}
